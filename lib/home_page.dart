@@ -27,29 +27,20 @@ class _ContentMain extends State<HomePage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      padding: EdgeInsets.all(24.0),
-      child: Column(
-        children: <Widget>[
-          Expanded(
-            child: ContentSummary(),
-            flex: 1,
-          ),
-          Divider(
-            height: 16.0,
-          ),
-          Expanded(
-            child: ContentUpdates(),
-            flex: 1,
-          ),
-          Divider(
-            height: 16.0,
-          ),
-          Expanded(
-            child: ContentParts(),
-            flex: 1,
-          )
-        ],
-      ),
-    );
+        padding: EdgeInsets.all(24.0),
+        child: ListView(
+          shrinkWrap: true,
+          children: <Widget>[
+           ContentSummary(),
+            Divider(
+              height: 16.0,
+            ),
+            ContentUpdates(),
+            Divider(
+              height: 16.0,
+            ),
+            ContentParts()
+          ],
+        ));
   }
 }
